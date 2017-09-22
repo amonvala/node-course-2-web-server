@@ -44,7 +44,7 @@ hbs.registerHelper('screamIt',(text)=>{
 app.get('/', (req,res) => {
   //res.send('<h1>hello express!</h1>');
   res.render('home.hbs',{
-      pageTitle:'Ev',
+      pageTitle:'Home',
       welcomeMessage:'hoş geldin.'
     }
   );
@@ -55,11 +55,17 @@ app.get('/nicolekidman',(req,res)=>{
 });
 
 app.get('/about',(req,res)=>{
-
   res.render('about.hbs',{
-    pageTitle:'About Page'
+    pageTitle:'About'
   });
 });
+
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle:'My portfolio',
+    content:'my portfolio is here. (i am not sure about is this correct spell of word portfolio or not!)'
+  });
+})
 
 app.get('/bad',(req,res)=>{
   var errorObject = {
