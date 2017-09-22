@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require("hbs");
 const fs = require('fs'); // file & directory controls
 
-var portNumber = 3000;
+var portNumber = process.env.PORT || 3000; // heroku için port numarasını özelleştirir.
 var app = express();
 
 // declares location of partials
